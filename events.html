@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="events.css">
+</head>
+<body>
+    <header>
+        <h1>Upcoming Events</h1>
+    </header>
+
+    <div class="events-container">
+        <div class="event-card">
+            <img src="Concert Event.jpeg" alt="Concert Event">
+            <h3>Live Concert</h3>
+            <p>Date: 25th August 2024</p>
+            <p>Venue: Madison Square Garden</p>
+            <a href="bookings.html?event=concert" class="book-button">Book Now</a>
+        </div>
+
+        <div class="event-card">
+            <img src="Comedy Show Event.jpeg" alt="Comedy Show Event">
+            <h3>Stand-up Comedy Night</h3>
+            <p>Date: 30th August 2024</p>
+            <p>Venue: Apollo Theater</p>
+            <a href="bookings.html?event=comedy_show" class="book-button">Book Now</a>
+        </div>
+
+        <div class="event-card">
+            <img src="Theater Play.jpeg" alt="Theater Play">
+            <h3>Theater Play</h3>
+            <p>Date: 5th September 2024</p>
+            <p>Venue: Broadway</p>
+            <a href="bookings.html?event=theater" class="book-button">Book Now</a>
+        </div>
+
+        <div class="event-card">
+            <img src="Music Festival.jpeg" alt="Music Festival">
+            <h3>Summer Music Festival</h3>
+            <p>Date: 10th September 2024</p>
+            <p>Venue: Central Park</p>
+            <a href="bookings.html?event=festival" class="book-button">Book Now</a>
+        </div>
+    </div>
+
+    <ul>
+        {% for row in results %}
+          <li>{{ row[1] }} - {{ row[2] }}</li>
+        {% endfor %}
+      </ul>
+      
+</body>
+</html>

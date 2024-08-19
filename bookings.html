@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking</title>
+    <link rel="stylesheet" href="bookings.css">
+</head>
+<body>
+    <div class="booking-container">
+        <h2>Book Your Event</h2>
+        <form action="/submit-booking" method="POST">
+            <div class="input-group">
+                <label for="event">Event</label>
+                <input type="text" id="event" name="event" readonly value="">
+            </div>
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="tickets">Number of Tickets</label>
+                <input type="number" id="tickets" name="tickets" min="1" max="10" required>
+            </div>
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+    <script>
+        // Set the event name in the booking form based on the query parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const event = urlParams.get('event');
+        if (event) {
+            document.getElementById('event').value = event.replace('_', ' ').toUpperCase();
+        }
+    </script>
+    <form action="main.py" method="POST">
+        <!-- form fields here -->
+    </form>
+</body>
+</html>

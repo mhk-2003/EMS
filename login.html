@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <div class="container">
+            <h2>Signin</h2>
+            <form action="/register.html" method="POST">
+                <div class="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <input type="checkbox" name="s password"/><label>Save Password</label>
+                </div>
+                <button type="submit">Signin</button>
+            </form>
+            <p>Don't have an account? <a href="register.html">Signup here</a></p>
+        </div>
+    </form>
+    
+</body>
+</html>
